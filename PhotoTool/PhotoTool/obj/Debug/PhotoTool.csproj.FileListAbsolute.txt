@@ -1,0 +1,9 @@
+E:\Data\GitHub\photo-tool-the-rising-meanzz\PhotoTool\PhotoTool\bin\Debug\PhotoTool.exe.config
+E:\Data\GitHub\photo-tool-the-rising-meanzz\PhotoTool\PhotoTool\bin\Debug\PhotoTool.exe
+E:\Data\GitHub\photo-tool-the-rising-meanzz\PhotoTool\PhotoTool\bin\Debug\PhotoTool.pdb
+E:\Data\GitHub\photo-tool-the-rising-meanzz\PhotoTool\PhotoTool\obj\Debug\PhotoTool.csprojResolveAssemblyReference.cache
+E:\Data\GitHub\photo-tool-the-rising-meanzz\PhotoTool\PhotoTool\obj\Debug\PhotoTool.Properties.Resources.resources
+E:\Data\GitHub\photo-tool-the-rising-meanzz\PhotoTool\PhotoTool\obj\Debug\PhotoTool.csproj.GenerateResource.Cache
+E:\Data\GitHub\photo-tool-the-rising-meanzz\PhotoTool\PhotoTool\obj\Debug\PhotoTool.exe
+E:\Data\GitHub\photo-tool-the-rising-meanzz\PhotoTool\PhotoTool\obj\Debug\PhotoTool.pdb
+E:\Data\GitHub\photo-tool-the-rising-meanzz\PhotoTool\PhotoTool\obj\Debug\PhotoTool.MainForm.resources
