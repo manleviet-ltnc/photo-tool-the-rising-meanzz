@@ -91,7 +91,7 @@ namespace Manning.MyPhotoAlbum
             {
                 if (Current == null)
                     return null;
-                return CurrentImage;
+                return Current.Image;
             }
         }
         static public bool AlbumExists(string name)

@@ -3,3 +3,9 @@ E:\Data\GitHub\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoAlbum\bin\Debug\MyP
 E:\Data\GitHub\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoAlbum\bin\Debug\MyPhotoAlbum.pdb
 E:\Data\GitHub\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoAlbum\obj\Debug\MyPhotoAlbum.dll
 E:\Data\GitHub\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoAlbum\obj\Debug\MyPhotoAlbum.pdb
+E:\Github\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoAlbum\bin\Debug\MyPhotoAlbum.dll
+E:\Github\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoAlbum\bin\Debug\MyPhotoAlbum.pdb
+E:\Github\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoAlbum\obj\Debug\MyPhotoAlbum.csprojResolveAssemblyReference.cache
+E:\Github\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoAlbum\obj\Debug\MyPhotoAlbum.csproj.CoreCompileInputs.cache
+E:\Github\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoAlbum\obj\Debug\MyPhotoAlbum.dll
+E:\Github\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoAlbum\obj\Debug\MyPhotoAlbum.pdb

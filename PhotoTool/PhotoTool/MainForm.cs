@@ -50,7 +50,7 @@ namespace PhotoTool
             ver.Major, ver.Minor, String.IsNullOrEmpty(name) ? "Untitle" : name);
         }
 
-        private void munFileLoad_Click(object sender, EventArgs e)
+        private void mnuFileLoad_Click(object sender, EventArgs e)
         {
             OpenFileDialog dlg = new OpenFileDialog();
             dlg.Title = "Open Photo";
