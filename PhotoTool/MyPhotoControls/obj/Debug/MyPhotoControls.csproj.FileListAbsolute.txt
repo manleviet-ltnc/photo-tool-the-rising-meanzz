@@ -1,0 +1,11 @@
+E:\Data\GitHub\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\bin\Debug\MyPhotoControls.dll
+E:\Data\GitHub\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\bin\Debug\MyPhotoControls.pdb
+E:\Data\GitHub\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\bin\Debug\MyPhotoAlbum.dll
+E:\Data\GitHub\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\bin\Debug\MyPhotoAlbum.pdb
+E:\Data\GitHub\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\obj\Debug\MyPhotoControls.csprojResolveAssemblyReference.cache
+E:\Data\GitHub\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\obj\Debug\Manning.MyPhotoControls.PixelDialog.resources
+E:\Data\GitHub\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\obj\Debug\MyPhotoControls.csproj.GenerateResource.Cache
+E:\Data\GitHub\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\obj\Debug\MyPhotoControls.dll
+E:\Data\GitHub\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\obj\Debug\MyPhotoControls.pdb
+E:\Data\GitHub\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\obj\Debug\Manning.MyPhotoControls.BaseEditDialog.resources
+E:\Data\GitHub\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\obj\Debug\Manning.MyPhotoControls.PhotoEditDialog.resources
