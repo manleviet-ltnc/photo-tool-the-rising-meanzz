@@ -15,14 +15,31 @@ namespace Manning.MyPhotoAlbum
     }
     public class AlbumStorage
     {
-        static private int CurrentVersion=63;
-        static public void WriteAlbum(PhotoAlbum album,string path)
+        static private int CurrentVersion=91;
+
+        static public void WriteAlbum(PhotoAlbum album, string path, string password)
         {
             StreamWriter sw = null;
             try
             {
-                sw = new StreamWriter(path, false);
-                sw.WriteLine(CurrentVersion.ToString());
+                if (password == null || password.Length == 0)
+                {
+                    sw = new StreamWriter(path, false);
+                    sw.WriteLine(CurrentVersion.ToString());
+                }
+                else
+                {
+                    // Create CryptoWriter to use as StreamWriter
+                    CryptoWriter cw
+                    = new CryptoWriter(path, password);
+                    cw.WriteUnencryptedLine(
+                    CurrentVersion.ToString() + 'e');
+                    cw.WriteLine(password);
+                    sw = cw;
+                }
+                // Save album properties
+                sw.WriteLine(album.Title);
+                sw.WriteLine(album.PhotoDescriptor.ToString());
                 foreach (Photograph p in album)
                     WritePhoto(sw, p);
                 album.HasChanged = false;
@@ -37,6 +54,7 @@ namespace Manning.MyPhotoAlbum
                     sw.Close();
             }
         }
+
         static private void WritePhoto(StreamWriter sw,Photograph p)
         {
             sw.WriteLine(p.FileName);
@@ -45,23 +63,43 @@ namespace Manning.MyPhotoAlbum
             sw.WriteLine(p.Photographer != null ? p.Photographer : "");
             sw.WriteLine(p.Notes != null ? p.Notes : "");
         }
-        static public PhotoAlbum ReadAlbum(string path)
+
+        static public PhotoAlbum ReadAlbum(string path, string password)
         {
             StreamReader sr = null;
             try
             {
-                sr = new StreamReader(path);
-                string version = sr.ReadLine();
-                PhotoAlbum album = new PhotoAlbum();
-                switch (version)
+                string version;
+                if (password == null || password.Length == 0)
                 {
-                    case "63":
-                        ReadAlbumV63(sr, album);break;
-                    default:
-                        throw new AlbumStorageException("Unrecognized album version");
+                    sr = new StreamReader(path);
+                    version = sr.ReadLine();
+                    if (version.EndsWith("e"))
+                        throw new AlbumStorageException(
+                        "A password is required to open the album");
                 }
-                album.HasChanged = false;
-                return album;
+                else
+                {
+                    // Create CryptoReader to use as StreamReader
+                    CryptoReader cr
+                    = new CryptoReader(path, password);
+                    version = cr.ReadUnencryptedLine();
+                    if (!version.EndsWith("e"))
+                    {
+                        // Decryption not required
+                        cr.Close();
+                        sr = new StreamReader(path);
+                        version = sr.ReadLine();
+                    }
+                    else
+                    {
+                        string checkLine = cr.ReadLine();
+                        if (checkLine != password)
+                            throw new AlbumStorageException(
+                            "The given password is not valid");
+                        sr = cr;
+                    }
+                }
             }
             catch (FileNotFoundException fnx)
             {
@@ -73,6 +111,20 @@ namespace Manning.MyPhotoAlbum
                     sr.Close();
             }
         }
+
+        static private void ReadAlbumV91(StreamReader sr, PhotoAlbum album)
+        {
+            // Read album properties
+            album.Title = sr.ReadLine();
+            string enumVal = sr.ReadLine();
+            album.PhotoDescriptor
+            = (PhotoAlbum.DescriptorOption)Enum.Parse(
+            typeof(PhotoAlbum.DescriptorOption),
+            enumVal);
+            // Version 91 finishes with Version 63
+            ReadAlbumV63(sr, album);
+        }
+
         static private void ReadAlbumV63(StreamReader sr, PhotoAlbum album)
         {
             Photograph p;

@@ -9,6 +9,30 @@ namespace Manning.MyPhotoAlbum
 {
     public class PhotoAlbum : Collection<Photograph>, IDisposable
     {
+        public enum DescriptorOption { FileName,Caption,DateTaken}
+
+        private string _title;
+        public string Title
+        {
+            get { return _title; }
+            set
+            {
+                _title = value;
+                HasChanged = true;
+            }
+        }
+
+        private DescriptorOption _descriptor;
+        public DescriptorOption PhotoDescriptor
+        {
+            get { return _descriptor; }
+            set
+            {
+                _descriptor = value;
+                HasChanged = true;
+            }
+        }       
+
         private bool _hasChanged = false;
         public bool HasChanged
         {
@@ -16,7 +40,7 @@ namespace Manning.MyPhotoAlbum
             {
                 if (_hasChanged) return true;
                 foreach (Photograph p in this)
-                    if (HasChanged) return true;
+                    if (p.HasChanged) return true;
                 return false;
             }
             set
@@ -28,12 +52,25 @@ namespace Manning.MyPhotoAlbum
 
             }
         }
+
+        public PhotoAlbum()
+        {
+            ClearSettings();
+        }
+
         public Photograph Add(string filename)
         {
             Photograph p = new Photograph(filename);
             base.Add(p);
             return p;
         }
+
+        private void ClearSettings()
+        {
+            _title = null;
+            _descriptor = DescriptorOption.Caption;
+        }
+
         protected override void ClearItems()
         {
             if (Count > 0)
@@ -43,27 +80,51 @@ namespace Manning.MyPhotoAlbum
                 HasChanged = true;
             }
         }
+
         protected override void InsertItem(int index, Photograph item)
         {
 
             base.InsertItem(index, item);
             HasChanged = true;
         }
+
         protected override void RemoveItem(int index)
         {
             Items[index].Dispose();
             base.RemoveItem(index);
             HasChanged = true;
         }
+
         protected override void SetItem(int index, Photograph item)
         {
             base.SetItem(index, item);
             HasChanged = true;
         }
+
         public void Dispose()
-        { foreach (Photograph p in this)
+        {
+            ClearSettings();
+            foreach (Photograph p in this)
                 p.Dispose();
         }
+        
+        public string GetDescription(Photograph photo)
+        {
+            switch (PhotoDescriptor)
+            {
+                case DescriptorOption.Caption: return photo.Caption;
+                case DescriptorOption.DateTaken:
+                    return photo.DateTaken.ToShortDateString();
+                case DescriptorOption.FileName: return photo.FileName;
+            }
+            throw new ArgumentException("Unrecognized photo descriptor option.");
+        }
+
+        public string GetDescription(int index)
+        {
+            return GetDescription(this[index]);
+        }
+
     }
 
 }

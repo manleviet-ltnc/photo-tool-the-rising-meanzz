@@ -9,3 +9,4 @@ E:\Data\GitHub\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\obj\Debug\
 E:\Data\GitHub\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\obj\Debug\MyPhotoControls.pdb
 E:\Data\GitHub\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\obj\Debug\Manning.MyPhotoControls.BaseEditDialog.resources
 E:\Data\GitHub\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\obj\Debug\Manning.MyPhotoControls.PhotoEditDialog.resources
+E:\Data\GitHub\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\obj\Debug\Manning.MyPhotoControls.AlbumEditDialog.resources
