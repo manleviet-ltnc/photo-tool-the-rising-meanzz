@@ -10,3 +10,17 @@ E:\Data\GitHub\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\obj\Debug\
 E:\Data\GitHub\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\obj\Debug\Manning.MyPhotoControls.BaseEditDialog.resources
 E:\Data\GitHub\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\obj\Debug\Manning.MyPhotoControls.PhotoEditDialog.resources
 E:\Data\GitHub\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\obj\Debug\Manning.MyPhotoControls.AlbumEditDialog.resources
+E:\Github\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\bin\Debug\MyPhotoControls.dll
+E:\Github\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\bin\Debug\MyPhotoControls.pdb
+E:\Github\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\bin\Debug\MyPhotoAlbum.dll
+E:\Github\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\bin\Debug\MyPhotoAlbum.pdb
+E:\Github\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\obj\Debug\MyPhotoControls.csprojResolveAssemblyReference.cache
+E:\Github\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\obj\Debug\Manning.MyPhotoControls.AlbumEditDialog.resources
+E:\Github\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\obj\Debug\Manning.MyPhotoControls.AlbumPasswordDialog.resources
+E:\Github\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\obj\Debug\Manning.MyPhotoControls.BaseEditDialog.resources
+E:\Github\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\obj\Debug\Manning.MyPhotoControls.PhotoEditDialog.resources
+E:\Github\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\obj\Debug\Manning.MyPhotoControls.PixelDialog.resources
+E:\Github\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\obj\Debug\MyPhotoControls.csproj.GenerateResource.Cache
+E:\Github\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\obj\Debug\MyPhotoControls.csproj.CoreCompileInputs.cache
+E:\Github\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\obj\Debug\MyPhotoControls.dll
+E:\Github\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\obj\Debug\MyPhotoControls.pdb

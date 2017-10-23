@@ -54,6 +54,10 @@ namespace Manning.MyPhotoAlbum
                     sw.Close();
             }
         }
+        static public void WriteAlbum(PhotoAlbum album, string path)
+        {
+            WriteAlbum(album, path, null);
+        }
 
         static private void WritePhoto(StreamWriter sw,Photograph p)
         {
@@ -81,8 +85,7 @@ namespace Manning.MyPhotoAlbum
                 else
                 {
                     // Create CryptoReader to use as StreamReader
-                    CryptoReader cr
-                    = new CryptoReader(path, password);
+                    CryptoReader cr= new CryptoReader(path, password);
                     version = cr.ReadUnencryptedLine();
                     if (!version.EndsWith("e"))
                     {
@@ -100,6 +103,23 @@ namespace Manning.MyPhotoAlbum
                         sr = cr;
                     }
                 }
+                PhotoAlbum album = new PhotoAlbum();
+                switch (version)
+                {
+                   case "63":
+                      ReadAlbumV63(sr, album); break;
+                    case "91":
+                    case "91e":
+                      ReadAlbumV91(sr, album); break;
+                    default:
+                      throw new AlbumStorageException("Unrecognized album version");
+                }
+                album.HasChanged = false;
+                return album;
+            }
+            catch (System.Security.Cryptography.CryptographicException cex)
+            {
+                throw new AlbumStorageException("Unable to decrypt album " + path, cex);
             }
             catch (FileNotFoundException fnx)
             {
@@ -111,16 +131,18 @@ namespace Manning.MyPhotoAlbum
                     sr.Close();
             }
         }
+        static public PhotoAlbum ReadAlbum(string path)
+        {
+            return ReadAlbum(path, null);
+        }
 
         static private void ReadAlbumV91(StreamReader sr, PhotoAlbum album)
         {
             // Read album properties
             album.Title = sr.ReadLine();
             string enumVal = sr.ReadLine();
-            album.PhotoDescriptor
-            = (PhotoAlbum.DescriptorOption)Enum.Parse(
-            typeof(PhotoAlbum.DescriptorOption),
-            enumVal);
+            album.PhotoDescriptor= (PhotoAlbum.DescriptorOption)Enum.Parse(typeof(PhotoAlbum.DescriptorOption),
+                                    enumVal);
             // Version 91 finishes with Version 63
             ReadAlbumV63(sr, album);
         }
@@ -147,6 +169,24 @@ namespace Manning.MyPhotoAlbum
             p.Photographer = sr.ReadLine();
             p.Notes = sr.ReadLine();
             return p;
+        }
+
+        static public bool IsEncrypted(string path)
+        {
+            StreamReader sr = null;
+            try
+            {
+                using (sr = new StreamReader(path))
+                {
+                    string version = sr.ReadLine();
+                    return version.EndsWith("e");
+                }
+            }
+            catch (FileNotFoundException fnx)
+            {
+                throw new AlbumStorageException(
+                "Unable to find album " + path, fnx);
+            }
         }
     }
 }
