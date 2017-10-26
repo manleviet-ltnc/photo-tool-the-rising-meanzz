@@ -24,3 +24,4 @@ E:\Github\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\obj\Debug\MyPho
 E:\Github\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\obj\Debug\MyPhotoControls.csproj.CoreCompileInputs.cache
 E:\Github\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\obj\Debug\MyPhotoControls.dll
 E:\Github\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\obj\Debug\MyPhotoControls.pdb
+E:\Data\GitHub\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\obj\Debug\Manning.MyPhotoControls.AlbumPasswordDialog.resources

@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.tblPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.txtPhotoFile = new System.Windows.Forms.TextBox();
             this.txtCaption = new System.Windows.Forms.TextBox();
-            this.txtPhotographer = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.mskDateTaken = new System.Windows.Forms.MaskedTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtNotes = new System.Windows.Forms.TextBox();
-            this.mskDateTaken = new System.Windows.Forms.MaskedTextBox();
+            this.cmbPhotographer = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.tblPanel.SuspendLayout();
             this.SuspendLayout();
@@ -57,9 +57,9 @@
             this.tblPanel.Controls.Add(this.label2, 0, 1);
             this.tblPanel.Controls.Add(this.txtPhotoFile, 1, 0);
             this.tblPanel.Controls.Add(this.txtCaption, 1, 1);
-            this.tblPanel.Controls.Add(this.txtPhotographer, 1, 3);
             this.tblPanel.Controls.Add(this.label1, 0, 0);
             this.tblPanel.Controls.Add(this.mskDateTaken, 1, 2);
+            this.tblPanel.Controls.Add(this.cmbPhotographer, 1, 3);
             this.tblPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblPanel.Location = new System.Drawing.Point(0, 0);
             this.tblPanel.Name = "tblPanel";
@@ -70,6 +70,39 @@
             this.tblPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tblPanel.Size = new System.Drawing.Size(258, 116);
             this.tblPanel.TabIndex = 0;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label4.Location = new System.Drawing.Point(3, 87);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(84, 29);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "&Photographer:";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3.Location = new System.Drawing.Point(3, 58);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(84, 29);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "&Date Taken:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Location = new System.Drawing.Point(3, 29);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(84, 29);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Cap&tion:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtPhotoFile
             // 
@@ -87,13 +120,6 @@
             this.txtCaption.TabIndex = 3;
             this.txtCaption.TextChanged += new System.EventHandler(this.txtCaption_TextChanged);
             // 
-            // txtPhotographer
-            // 
-            this.txtPhotographer.Location = new System.Drawing.Point(93, 90);
-            this.txtPhotographer.Name = "txtPhotographer";
-            this.txtPhotographer.Size = new System.Drawing.Size(162, 20);
-            this.txtPhotographer.TabIndex = 7;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -105,38 +131,15 @@
             this.label1.Text = "Photo &File";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label2
+            // mskDateTaken
             // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Location = new System.Drawing.Point(3, 29);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 29);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Cap&tion:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Location = new System.Drawing.Point(3, 58);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 29);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "&Date Taken:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Location = new System.Drawing.Point(3, 87);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 29);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "&Photographer:";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.mskDateTaken.Location = new System.Drawing.Point(93, 61);
+            this.mskDateTaken.Mask = "00/00/0000";
+            this.mskDateTaken.Name = "mskDateTaken";
+            this.mskDateTaken.Size = new System.Drawing.Size(162, 20);
+            this.mskDateTaken.TabIndex = 5;
+            this.mskDateTaken.ValidatingType = typeof(System.DateTime);
+            this.mskDateTaken.TypeValidationCompleted += new System.Windows.Forms.TypeValidationEventHandler(this.mskDateTaken_TypeValidationCompleted);
             // 
             // label5
             // 
@@ -157,15 +160,18 @@
             this.txtNotes.Size = new System.Drawing.Size(260, 71);
             this.txtNotes.TabIndex = 4;
             // 
-            // mskDateTaken
+            // cmbPhotographer
             // 
-            this.mskDateTaken.Location = new System.Drawing.Point(93, 61);
-            this.mskDateTaken.Mask = "00/00/0000";
-            this.mskDateTaken.Name = "mskDateTaken";
-            this.mskDateTaken.Size = new System.Drawing.Size(162, 20);
-            this.mskDateTaken.TabIndex = 5;
-            this.mskDateTaken.ValidatingType = typeof(System.DateTime);
-            this.mskDateTaken.TypeValidationCompleted += new System.Windows.Forms.TypeValidationEventHandler(this.mskDateTaken_TypeValidationCompleted);
+            this.cmbPhotographer.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbPhotographer.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbPhotographer.FormattingEnabled = true;
+            this.cmbPhotographer.Location = new System.Drawing.Point(93, 90);
+            this.cmbPhotographer.MaxDropDownItems = 4;
+            this.cmbPhotographer.Name = "cmbPhotographer";
+            this.cmbPhotographer.Size = new System.Drawing.Size(162, 21);
+            this.cmbPhotographer.Sorted = true;
+            this.cmbPhotographer.TabIndex = 7;
+            this.cmbPhotographer.Leave += new System.EventHandler(this.cmbPhotographer_Leave);
             // 
             // PhotoEditDialog
             // 
@@ -194,10 +200,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtPhotoFile;
         private System.Windows.Forms.TextBox txtCaption;
-        private System.Windows.Forms.TextBox txtPhotographer;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtNotes;
         private System.Windows.Forms.MaskedTextBox mskDateTaken;
+        private System.Windows.Forms.ComboBox cmbPhotographer;
     }
 }
