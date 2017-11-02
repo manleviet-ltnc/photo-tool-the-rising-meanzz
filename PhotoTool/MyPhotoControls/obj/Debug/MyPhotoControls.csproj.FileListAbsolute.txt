@@ -25,3 +25,17 @@ E:\Github\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\obj\Debug\MyPho
 E:\Github\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\obj\Debug\MyPhotoControls.dll
 E:\Github\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\obj\Debug\MyPhotoControls.pdb
 E:\Data\GitHub\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\obj\Debug\Manning.MyPhotoControls.AlbumPasswordDialog.resources
+C:\Users\TGDD\Documents\GitHub\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\bin\Debug\MyPhotoControls.dll
+C:\Users\TGDD\Documents\GitHub\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\bin\Debug\MyPhotoControls.pdb
+C:\Users\TGDD\Documents\GitHub\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\bin\Debug\MyPhotoAlbum.dll
+C:\Users\TGDD\Documents\GitHub\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\bin\Debug\MyPhotoAlbum.pdb
+C:\Users\TGDD\Documents\GitHub\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\obj\Debug\MyPhotoControls.csprojResolveAssemblyReference.cache
+C:\Users\TGDD\Documents\GitHub\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\obj\Debug\Manning.MyPhotoControls.AlbumEditDialog.resources
+C:\Users\TGDD\Documents\GitHub\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\obj\Debug\Manning.MyPhotoControls.AlbumPasswordDialog.resources
+C:\Users\TGDD\Documents\GitHub\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\obj\Debug\Manning.MyPhotoControls.BaseEditDialog.resources
+C:\Users\TGDD\Documents\GitHub\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\obj\Debug\Manning.MyPhotoControls.PhotoEditDialog.resources
+C:\Users\TGDD\Documents\GitHub\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\obj\Debug\Manning.MyPhotoControls.PixelDialog.resources
+C:\Users\TGDD\Documents\GitHub\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\obj\Debug\MyPhotoControls.csproj.GenerateResource.Cache
+C:\Users\TGDD\Documents\GitHub\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\obj\Debug\MyPhotoControls.csproj.CoreCompileInputs.cache
+C:\Users\TGDD\Documents\GitHub\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\obj\Debug\MyPhotoControls.dll
+C:\Users\TGDD\Documents\GitHub\photo-tool-the-rising-meanzz\PhotoTool\MyPhotoControls\obj\Debug\MyPhotoControls.pdb
