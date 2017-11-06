@@ -12,6 +12,21 @@ namespace MyAlbumEditor
 {
     public partial class WorkerProgressDialog : Form
     {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+        public int Progress
+        {
+            get { return pbarProgress.Value; }
+            set { pbarProgress.Value = value; }
+        }
+
+=======
+>>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
+=======
+>>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
+=======
+>>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
         public WorkerProgressDialog()
         {
             InitializeComponent();

@@ -28,10 +28,99 @@
         /// </summary>
         private void InitializeComponent()
         {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+            this.btnColor = new System.Windows.Forms.Button();
+            this.btnPrevious = new System.Windows.Forms.Button();
+            this.btnNext = new System.Windows.Forms.Button();
+            this.pbxPhoto = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxPhoto)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // btnColor
+            // 
+            this.btnColor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnColor.Location = new System.Drawing.Point(272, 173);
+            this.btnColor.Name = "btnColor";
+            this.btnColor.Size = new System.Drawing.Size(75, 23);
+            this.btnColor.TabIndex = 11;
+            this.btnColor.Text = "B && &W";
+            this.btnColor.UseVisualStyleBackColor = true;
+            this.btnColor.Click += new System.EventHandler(this.btnColor_Click);
+            // 
+            // btnPrevious
+            // 
+            this.btnPrevious.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPrevious.Location = new System.Drawing.Point(272, 33);
+            this.btnPrevious.Name = "btnPrevious";
+            this.btnPrevious.Size = new System.Drawing.Size(75, 23);
+            this.btnPrevious.TabIndex = 10;
+            this.btnPrevious.Text = "&Previous";
+            this.btnPrevious.UseVisualStyleBackColor = true;
+            this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
+            // 
+            // btnNext
+            // 
+            this.btnNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNext.Location = new System.Drawing.Point(272, 3);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(75, 23);
+            this.btnNext.TabIndex = 9;
+            this.btnNext.Text = "&Next";
+            this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
+            // pbxPhoto
+            // 
+            this.pbxPhoto.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbxPhoto.Location = new System.Drawing.Point(3, 3);
+            this.pbxPhoto.Name = "pbxPhoto";
+            this.pbxPhoto.Size = new System.Drawing.Size(263, 194);
+            this.pbxPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxPhoto.TabIndex = 8;
+            this.pbxPhoto.TabStop = false;
+            // 
+            // AlbumImage
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnColor);
+            this.Controls.Add(this.btnPrevious);
+            this.Controls.Add(this.btnNext);
+            this.Controls.Add(this.pbxPhoto);
+            this.Margin = new System.Windows.Forms.Padding(5);
+            this.Name = "AlbumImage";
+            this.Size = new System.Drawing.Size(350, 200);
+            ((System.ComponentModel.ISupportInitialize)(this.pbxPhoto)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Button btnColor;
+        private System.Windows.Forms.Button btnPrevious;
+        private System.Windows.Forms.Button btnNext;
+        private System.Windows.Forms.PictureBox pbxPhoto;
+=======
+=======
+>>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
+=======
+>>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
             components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         }
 
         #endregion
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
+=======
+>>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
+=======
+>>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
     }
 }

@@ -36,9 +36,27 @@
             this.txtCaption = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbPhotographer = new System.Windows.Forms.ComboBox();
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtNotes = new System.Windows.Forms.TextBox();
+            this.dtpDateTaken = new System.Windows.Forms.DateTimePicker();
+=======
             this.dtpDateTaken = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.txtNotes = new System.Windows.Forms.TextBox();
+>>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
+=======
+            this.dtpDateTaken = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtNotes = new System.Windows.Forms.TextBox();
+>>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
+=======
+            this.dtpDateTaken = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtNotes = new System.Windows.Forms.TextBox();
+>>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
             this.panel1.SuspendLayout();
             this.tblPanel.SuspendLayout();
             this.SuspendLayout();
@@ -139,6 +157,40 @@
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // cmbPhotographer
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+            // 
+            this.cmbPhotographer.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbPhotographer.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbPhotographer.FormattingEnabled = true;
+            this.cmbPhotographer.Location = new System.Drawing.Point(93, 90);
+            this.cmbPhotographer.MaxDropDownItems = 4;
+            this.cmbPhotographer.Name = "cmbPhotographer";
+            this.cmbPhotographer.Size = new System.Drawing.Size(162, 21);
+            this.cmbPhotographer.Sorted = true;
+            this.cmbPhotographer.TabIndex = 7;
+            this.cmbPhotographer.Leave += new System.EventHandler(this.cmbPhotographer_Leave);
+=======
+=======
+>>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
+            // 
+            this.cmbPhotographer.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbPhotographer.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbPhotographer.FormattingEnabled = true;
+            this.cmbPhotographer.Location = new System.Drawing.Point(124, 109);
+            this.cmbPhotographer.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbPhotographer.MaxDropDownItems = 4;
+            this.cmbPhotographer.Name = "cmbPhotographer";
+            this.cmbPhotographer.Size = new System.Drawing.Size(215, 24);
+            this.cmbPhotographer.Sorted = true;
+            this.cmbPhotographer.TabIndex = 7;
+            this.cmbPhotographer.Leave += new System.EventHandler(this.cmbPhotographer_Leave);
+            // 
+            // dtpDateTaken
+<<<<<<< HEAD
+            // 
+=======
             // 
             this.cmbPhotographer.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cmbPhotographer.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
@@ -154,12 +206,23 @@
             // 
             // dtpDateTaken
             // 
+>>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
+=======
+            // 
+>>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
             this.dtpDateTaken.CustomFormat = "dd/MM/yy  \'vào lúc\' h mm tt";
             this.dtpDateTaken.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpDateTaken.Location = new System.Drawing.Point(123, 73);
             this.dtpDateTaken.Name = "dtpDateTaken";
             this.dtpDateTaken.Size = new System.Drawing.Size(200, 22);
             this.dtpDateTaken.TabIndex = 5;
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
+=======
+>>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
+=======
+>>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
             // 
             // label5
             // 
@@ -182,6 +245,24 @@
             this.txtNotes.Size = new System.Drawing.Size(345, 86);
             this.txtNotes.TabIndex = 4;
             // 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+            // dtpDateTaken
+            // 
+            this.dtpDateTaken.CustomFormat = "MM/dd/yy \'at\' h:mm tt";
+            this.dtpDateTaken.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDateTaken.Location = new System.Drawing.Point(93, 61);
+            this.dtpDateTaken.Name = "dtpDateTaken";
+            this.dtpDateTaken.Size = new System.Drawing.Size(162, 20);
+            this.dtpDateTaken.TabIndex = 5;
+            // 
+=======
+>>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
+=======
+>>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
+=======
+>>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
             // PhotoEditDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
