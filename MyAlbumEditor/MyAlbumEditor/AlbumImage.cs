@@ -7,25 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 using Manning.MyPhotoAlbum;
 using Manning.MyPhotoControls;
-=======
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
-=======
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
-=======
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
 
 namespace MyAlbumEditor
 {
     public partial class AlbumImage : UserControl
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         private AlbumManager _manager = null;
         public AlbumManager Manager
         {
@@ -42,6 +30,15 @@ namespace MyAlbumEditor
         private WorkerProgressDialog WorkerDialog
         { get { return _worker; } }
 
+        private void UpdateImage()
+        {
+            if (Manager == null || Manager.Current == null)
+                pbxPhoto.Image = null;
+            else
+                AssignImage();
+            EnableButtons();
+        }
+
         private void AssignImage()
         {
             Bitmap bmp = Manager.Current.Image;
@@ -50,6 +47,7 @@ namespace MyAlbumEditor
             else
                 CreateBlackWhiteImage(bmp);
         }
+
         private void CreateBlackWhiteImage(Bitmap bmp)
         {
             BackgroundWorker bw = new BackgroundWorker();
@@ -58,7 +56,6 @@ namespace MyAlbumEditor
             bw.RunWorkerCompleted += worker_RunWorkerCompleted;
             bw.WorkerSupportsCancellation = true;
             bw.WorkerReportsProgress = true;
-
             _worker = new WorkerProgressDialog();
             WorkerDialog.Progress = 0;
             pbxPhoto.Image = null;
@@ -69,8 +66,7 @@ namespace MyAlbumEditor
 
         private void worker_DoWork(object sender, DoWorkEventArgs e)
         {
-            BackgroundWorker bw
-            = sender as BackgroundWorker;
+            BackgroundWorker bw = sender as BackgroundWorker;
             e.Result = null;
             Bitmap bmp = e.Argument as Bitmap;
             int width = bmp.Width;
@@ -105,9 +101,7 @@ namespace MyAlbumEditor
         {
             if (e.Error != null)
             {
-                MessageBox.Show("Unable to convert image "
-                                + "to black and white ("
-                                + e.Error.Message + ")");
+                MessageBox.Show("Unable to convert image to black and white ({0})", e.Error.Message);
             }
             else
             {
@@ -121,29 +115,6 @@ namespace MyAlbumEditor
             EnableButtons();
         }
 
-=======
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
-=======
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
-=======
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
-        public AlbumImage()
-        {
-            InitializeComponent();
-        }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        private void UpdateImage()
-        {
-            if (Manager == null || Manager.Current == null)
-                pbxPhoto.Image = null;
-            else
-                AssignImage();
-            EnableButtons();
-        }
-
         private void EnableButtons()
         {
             bool haveImage = (pbxPhoto.Image != null);
@@ -152,13 +123,13 @@ namespace MyAlbumEditor
             btnColor.Enabled = haveImage;
         }
 
-        private void btnNext_Click( object sender, EventArgs e)
+        private void btnNext_Click(object sender, EventArgs e)
         {
             Manager.MoveNext();
             UpdateImage();
         }
-
-        private void btnPrevious_Click( object sender, EventArgs e)
+        private void btnPrevious_Click(
+        object sender, EventArgs e)
         {
             Manager.MovePrev();
             UpdateImage();
@@ -182,12 +153,9 @@ namespace MyAlbumEditor
             UpdateImage();
         }
 
-
-=======
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
-=======
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
-=======
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
+        public AlbumImage()
+        {
+            InitializeComponent();
+        }
     }
 }

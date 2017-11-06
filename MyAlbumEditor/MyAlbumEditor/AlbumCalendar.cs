@@ -12,16 +12,6 @@ using Manning.MyPhotoControls;
 
 namespace MyAlbumEditor
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
-=======
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
-=======
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
     public partial class AlbumCalendar : UserControl
     {
         private AlbumManager _manager = null;
@@ -34,43 +24,12 @@ namespace MyAlbumEditor
                 UpdateCalendar();
             }
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
-=======
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
-        public AlbumCalendar()
-        {
-            InitializeComponent();
-        }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
-=======
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
-=======
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
         private void UpdateCalendar()
         {
             DateTime minDate = DateTime.MaxValue;
             DateTime maxDate = DateTime.MinValue;
             calDates.RemoveAllBoldedDates();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
-=======
-
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
-=======
-
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
             if (Manager == null)
             {
                 minDate = DateTime.Now;
@@ -82,18 +41,6 @@ namespace MyAlbumEditor
                 {
                     DateTime date = p.DateTaken;
                     calDates.AddBoldedDate(date);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
-=======
-
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
-=======
-
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
                     if (date < minDate) minDate = date;
                     if (date > maxDate) maxDate = date;
                 }
@@ -104,21 +51,17 @@ namespace MyAlbumEditor
             calDates.SelectionStart = minDate;
             calDates.UpdateBoldedDates();
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         public AlbumCalendar()
-        {
-            InitializeComponent();
-        }
+            {
+                InitializeComponent();
+            }
 
-        private void calDates_MouseDown(object sender, MouseEventArgs e)
+        private void AlbumCalendar_MouseDown(object sender, MouseEventArgs e)
         {
             // Ignore click if no album selected
             if (Manager == null) return;
-            MonthCalendar.HitTestInfo info = calDates.HitTest(e.X, e.Y);
-
+            MonthCalendar.HitTestInfo info= calDates.HitTest(e.X, e.Y);
             if (info.HitArea == MonthCalendar.HitArea.Date)
             {
                 ContextMenuStrip cms = new ContextMenuStrip();
@@ -139,7 +82,7 @@ namespace MyAlbumEditor
             }
         }
 
-        private void cmsItem_Click(object sender, EventArgs e)
+        private void cmsItem_Click(object sender,EventArgs e)
         {
             ToolStripItem item = sender as ToolStripItem;
             if (item != null && item.Tag is int)
@@ -148,8 +91,7 @@ namespace MyAlbumEditor
                 using (PhotoEditDialog dlg = new PhotoEditDialog(Manager))
                 {
                     DateTime oldDate = Manager.Current.DateTaken;
-                    if (dlg.ShowDialog() == DialogResult.OK
-                        && oldDate != Manager.Current.DateTaken)
+                    if (dlg.ShowDialog() == DialogResult.OK && oldDate != Manager.Current.DateTaken)
                     {
                         // DateTaken was modified
                         UpdateCalendar();
@@ -157,11 +99,6 @@ namespace MyAlbumEditor
                 }
             }
         }
-=======
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
-=======
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
-=======
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
     }
+    
 }

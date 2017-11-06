@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             this.label1 = new System.Windows.Forms.Label();
             this.pbarProgress = new System.Windows.Forms.ProgressBar();
             this.btnCancel = new System.Windows.Forms.Button();
@@ -41,15 +38,15 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(13, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(157, 13);
+            this.label1.Size = new System.Drawing.Size(158, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Converting image, please wait...";
+            this.label1.Text = "Converting Image, please wait...";
             // 
             // pbarProgress
             // 
-            this.pbarProgress.Location = new System.Drawing.Point(16, 29);
+            this.pbarProgress.Location = new System.Drawing.Point(13, 30);
             this.pbarProgress.Name = "pbarProgress";
-            this.pbarProgress.Size = new System.Drawing.Size(256, 23);
+            this.pbarProgress.Size = new System.Drawing.Size(259, 23);
             this.pbarProgress.Step = 1;
             this.pbarProgress.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
             this.pbarProgress.TabIndex = 1;
@@ -57,7 +54,7 @@
             // btnCancel
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(107, 58);
+            this.btnCancel.Location = new System.Drawing.Point(105, 60);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 2;
@@ -69,7 +66,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(284, 88);
+            this.ClientSize = new System.Drawing.Size(284, 92);
             this.ControlBox = false;
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.pbarProgress);
@@ -90,23 +87,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ProgressBar pbarProgress;
         private System.Windows.Forms.Button btnCancel;
-=======
-=======
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
-=======
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "WorkerProgressDialog";
-        }
-
-        #endregion
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
-=======
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
-=======
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
     }
 }

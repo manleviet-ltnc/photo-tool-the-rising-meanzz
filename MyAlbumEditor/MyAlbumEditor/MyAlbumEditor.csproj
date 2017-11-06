@@ -51,21 +51,12 @@
     <Compile Include="AlbumCalendar.Designer.cs">
       <DependentUpon>AlbumCalendar.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     <Compile Include="AlbumImage.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="AlbumImage.Designer.cs">
       <DependentUpon>AlbumImage.cs</DependentUpon>
     </Compile>
-=======
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
-=======
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
-=======
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
     <Compile Include="EditorForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,9 +65,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     <Compile Include="WorkerProgressDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,21 +77,6 @@
     <EmbeddedResource Include="AlbumImage.resx">
       <DependentUpon>AlbumImage.cs</DependentUpon>
     </EmbeddedResource>
-=======
-    <EmbeddedResource Include="AlbumCalendar.resx">
-      <DependentUpon>AlbumCalendar.cs</DependentUpon>
-    </EmbeddedResource>
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
-=======
-    <EmbeddedResource Include="AlbumCalendar.resx">
-      <DependentUpon>AlbumCalendar.cs</DependentUpon>
-    </EmbeddedResource>
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
-=======
-    <EmbeddedResource Include="AlbumCalendar.resx">
-      <DependentUpon>AlbumCalendar.cs</DependentUpon>
-    </EmbeddedResource>
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
     <EmbeddedResource Include="EditorForm.resx">
       <DependentUpon>EditorForm.cs</DependentUpon>
     </EmbeddedResource>

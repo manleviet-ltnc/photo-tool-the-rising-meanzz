@@ -15,20 +15,8 @@ namespace MyAlbumEditor
 {
     public partial class EditorForm : Form
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         static private readonly Rectangle DrawRect = new Rectangle(0, 0, 45, 45);
 
-=======
-        private static readonly Rectangle DrawRect = new Rectangle(0, 0, 45, 45);
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
-=======
-        private static readonly Rectangle DrawRect = new Rectangle(0, 0, 45, 45);
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
-=======
-        private static readonly Rectangle DrawRect = new Rectangle(0, 0, 45, 45);
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
         private AlbumManager _manager;
         private AlbumManager Manager
         {
@@ -95,19 +83,7 @@ namespace MyAlbumEditor
                     Manager = null;
                 }
             }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             UpdateTabs();
-=======
-           UpdateTabs();
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
-=======
-           UpdateTabs();
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
-=======
-           UpdateTabs();
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
             EnablePhotoButtons();
         }
 
@@ -115,31 +91,13 @@ namespace MyAlbumEditor
         {
             if (Manager == null)
             {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
-=======
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
-=======
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
                 lstPhotos.BackColor = SystemColors.Control;
                 lstPhotos.Items.Clear();
             }
             else
             {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
-=======
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
-=======
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
                 lstPhotos.BackColor = SystemColors.Window;
                 lstPhotos.FormatString = Manager.Album.GetDescriptorFormat();
                 if (Manager.Album.PhotoDescriptor == PhotoAlbum.DescriptorOption.DateTaken)
@@ -293,48 +251,15 @@ namespace MyAlbumEditor
             }
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         private void lstPhotos_MeasureItem(object sender, MeasureItemEventArgs e)
         {
             Photograph p = Manager.Album[e.Index];
-            Rectangle scaledRect = ImageUtility.ScaleToFit(
-            p.Image, DrawRect);
+            Rectangle scaledRect = ImageUtility.ScaleToFit( p.Image, DrawRect);
             Font f = lstPhotos.Font;
             string text = lstPhotos.GetItemText(p);
             int textWidth = (int)e.Graphics.MeasureString(text, f).Width;
             e.ItemWidth = scaledRect.Width + textWidth + 2;
             e.ItemHeight = Math.Max(scaledRect.Height,f.Height) + 2;
-=======
-=======
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
-=======
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
-        private void EditorForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lstPhotos_MeasureItem(object sender, MeasureItemEventArgs e)
-        {
-            Photograph p = Manager.Album[e.Index];
-            Rectangle scaledRect = ImageUtility.ScaleToFit(p.Image, DrawRect);
-
-            Font f = lstPhotos.Font;
-            string text = lstPhotos.GetItemText(p);
-            int textWidth = (int)e.Graphics.MeasureString(text, f).Width;
-
-            e.ItemWidth = scaledRect.Width + textWidth + 2;
-            e.ItemHeight = Math.Max(scaledRect.Height, f.Height) + 2;
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
-=======
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
-=======
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
         }
 
         private void lstPhotos_DrawItem(object sender, DrawItemEventArgs e)
@@ -343,69 +268,38 @@ namespace MyAlbumEditor
             if (e.Index < 0 || e.Index > Manager.Album.Count - 1)
                 return;
             Photograph p = Manager.Album[e.Index];
-
             // Determine image rectangle
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             Rectangle imageRect = ImageUtility.ScaleToFit( p.Image, DrawRect);
-=======
-            Rectangle imageRect = ImageUtility.ScaleToFit(p.Image, DrawRect);
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
-=======
-            Rectangle imageRect = ImageUtility.ScaleToFit(p.Image, DrawRect);
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
-=======
-            Rectangle imageRect = ImageUtility.ScaleToFit(p.Image, DrawRect);
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
             imageRect.X = e.Bounds.X + 2;
             imageRect.Y = e.Bounds.Y + 1;
-
             // Draw text image
             g.DrawImage(p.Image, imageRect);
             g.DrawRectangle(Pens.Black, imageRect);
             p.ReleaseImage();
-
             // Determine text rectangle
             Rectangle textRect = new Rectangle();
             textRect.X = imageRect.Right + 2;
             textRect.Y = imageRect.Y + ((imageRect.Height - e.Font.Height) / 2);
             textRect.Width = e.Bounds.Width - imageRect.Width - 4;
             textRect.Height = e.Font.Height;
-
             // Determine text brush (handle selection)
             Brush textBrush;
             if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
             {
-                g.FillRectangle(SystemBrushes.Highlight, textRect);
+                g.FillRectangle( SystemBrushes.Highlight, textRect);
                 textBrush = SystemBrushes.HighlightText;
             }
             else
             {
-                g.FillRectangle(SystemBrushes.Window, textRect);
+                g.FillRectangle( SystemBrushes.Window, textRect);
                 textBrush = SystemBrushes.WindowText;
             }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
-=======
-
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
-=======
-
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
             // Draw the text
             g.DrawString(lstPhotos.GetItemText(p), e.Font, textBrush, textRect);
         }
 
         private void tcPhotos_SelectedIndexChanged(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             UpdateTabs();
         }
 
@@ -426,43 +320,5 @@ namespace MyAlbumEditor
                 albumImages.Manager = Manager;
         }
 
-=======
-=======
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
-=======
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
-            {
-                UpdateTabs();
-            }
-            private void UpdateTabs()
-            {
-                bool nullManager = (Manager == null);
-                if (nullManager)
-                    Text = "Selected album could not be opened";
-                else
-                    Text = "Album " + Manager.ShortName;
-
-                btnAlbumProps.Enabled = !nullManager;
-                tcPhotos.Enabled = !nullManager;
-
-                if (tcPhotos.SelectedTab == pagePhotos)
-                    DisplayAlbum();
-                else if (tcPhotos.SelectedTab == pageDates)
-                    albCalendar.Manager = Manager;
-                if (tcPhotos.SelectedTab == pagePhotos)
-                    DisplayAlbum();
-                else if (tcPhotos.SelectedTab == pageDates)
-                    albCalendar.Manager = Manager;
-                else if (tcPhotos.SelectedTab == pageImages)
-                    albumImages.Manager = Manager;
-            }
-        }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
-=======
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
-=======
->>>>>>> 23a8ee08d31b3d98008f39085f027f4aec949a4d
     }
 }
