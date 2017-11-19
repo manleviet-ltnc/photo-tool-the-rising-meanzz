@@ -13,6 +13,28 @@ namespace Manning.MyPhotoControls
 {
     public partial class PixelDialog : Form
     {
+        static private Form SharedMdiParent = null;
+        static private PixelDialog SharedInstance;
+
+        static public Form GlobalMdiParent
+        {
+            get { return SharedMdiParent; }
+            set { SharedMdiParent = value; }
+        }
+        static public PixelDialog GlobalInstance
+        {
+            get
+            {
+                if (SharedInstance == null || SharedInstance.IsDisposed)
+                {
+                    SharedInstance = new PixelDialog();
+                    SharedInstance.MdiParent = GlobalMdiParent;
+                    SharedInstance.Visible = false;
+                }
+                return SharedInstance;
+            }
+        }
+
         public PixelDialog()
         {
             InitializeComponent();
@@ -37,9 +59,7 @@ namespace Manning.MyPhotoControls
             SetPixelData(0, 0, 0, 0, 0);
         }
 
-        public void UpdatePixelData(int xPos,int yPos, Bitmap bmp,
-                                    Rectangle displayRect, Rectangle bmpRect,
-                                    PictureBoxSizeMode sizeMode)
+        public void UpdatePixelData(int xPos,int yPos, Bitmap bmp,Rectangle displayRect, Rectangle bmpRect,PictureBoxSizeMode sizeMode)
         {
             //Determine (x,y) position within image
             int x = 0, y = 0;

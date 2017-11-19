@@ -36,6 +36,26 @@ namespace PhotoTool
             InitializeComponent();
             NewAlbum();
         }
+        public MainForm(string path, string pwd) : this()
+        {
+            // Caller must deal with any exception
+            Manager = new AlbumManager(path, pwd);
+        }
+
+        internal ToolStrip MainToolStrip
+        {
+            get { return toolStripMain; }
+        }
+
+        public string AlbumPath
+        {
+            get { return Manager.FullName; }
+        }
+
+        public string AlbumTitle
+        {
+            get { return Manager.Album.Title; }
+        }
 
         private void NewAlbum()
         {
@@ -326,7 +346,7 @@ namespace PhotoTool
         {
             if (PixelForm == null || PixelForm.IsDisposed)
             {
-                PixelForm = new PixelDialog();
+                PixelForm = PixelDialog.GlobalInstance;
                 PixelForm.Owner = this;
             }
             PixelForm.Show();
@@ -336,6 +356,9 @@ namespace PhotoTool
 
         private void UpdatePixelDialog(int x, int y)
         {
+            if (IsMdiChild)
+                PixelForm = PixelDialog.GlobalInstance;
+
             if (PixelForm != null && PixelForm.Visible)
             {
                 Bitmap bmp = Manager.CurrentImage;
@@ -455,14 +478,25 @@ namespace PhotoTool
 
             tsbPrevious.ImageIndex = 1;
             tsbNext.ImageIndex = 0;
-
             // Set up toolStripDialogs
             tsbAlbumProps.Tag = mnuAlbumProps;
             tsbPhotoProps.Tag = mnuPhotoProps;
             tsbPixelData.Tag = tsbPixelData.Image;
-
             // Set up toolStripImages
             tsdImage.DropDown = mnuImage.DropDown;
+            // Adjust form if MDI child
+            if (IsMdiChild)
+            {
+                menuStrip1.Visible = false;
+                DisplayAlbum();
+            }
+            // Adjust form if MDI child
+            if (this.IsMdiChild)
+            {
+                menuStrip1.Visible = false;
+                toolStripMain.Visible = false;
+                DisplayAlbum();
+            }
 
             base.OnLoad(e);
         }
@@ -534,6 +568,13 @@ namespace PhotoTool
                 tssSelect.DropDown = drop;
                 tssSelect.DefaultItem = drop.Items[0];
             }
+        }
+
+        protected override void OnEnter(EventArgs e)
+        {
+            if (IsMdiChild)
+                UpdatePixelButton(PixelDialog.GlobalInstance.Visible);
+            base.OnEnter(e);
         }
     }
 }
